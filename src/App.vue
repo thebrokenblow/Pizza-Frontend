@@ -1,8 +1,17 @@
 <script>
 import MainHeader from './components/MainHeader.vue'
 import FilteredPanel from './components/FilteredPanel.vue'
-
+import axios from 'axios'
 export default {
+  mounted() {
+    try {
+      axios.get('https://localhost:7243/Products').then((response) => {
+        console.log(response)
+      })
+    } catch (error) {
+      console.log(error)
+    }
+  },
   components: {
     MainHeader,
     FilteredPanel
@@ -16,11 +25,9 @@ export default {
   methods: {
     hideMainHeader() {
       this.isShowMainHeader = false
-      console.log(this.isShowMainHeader)
     },
     showMainHeader() {
       this.isShowMainHeader = true
-      console.log(this.isShowMainHeader)
     }
   }
 }

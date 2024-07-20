@@ -14,7 +14,7 @@ export default {
 </script>
 
 <template>
-  <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4">
+  <div class="row row-col-1 row-col-sm-1 row-col-md-2 row-col-lg-2 row-col-xl-3 row-col-xxl-4">
     <div v-for="item in array" :key="item" class="col" style="margin-bottom: 25px">
       <PizzaCard :title="'some text'" :description="'some text'" :cost="500" />
     </div>

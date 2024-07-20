@@ -9,10 +9,8 @@ export default {
     setView(index) {
       if (index == 0) {
         this.$emit('hideMainHeader')
-        console.log('hideMainHeader')
       } else {
         this.$emit('showMainHeader')
-        console.log('showMainHeader')
       }
       this.currentView = index
     }
